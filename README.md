@@ -39,6 +39,7 @@ can call following Endpoints by using POSTMAN
 
  - A File Listener to continuosely read file without interrupt
  - Notify the individual threads
+ - Hard coded file names while reading the data (trades.json & client_subscription.json)
 
 License
 ----
