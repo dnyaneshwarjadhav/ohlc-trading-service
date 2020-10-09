@@ -17,6 +17,9 @@ OHLS requires [Java-Jdk-1.8](https://www.oracle.com/in/java/technologies/javase/
 
 Install the dependencies and devDependencies and start the server.
 
+## Architecture flow
+![alt text](https://github.com/dnyaneshwarjadhav/ohlc-trading-service/blob/master/ohlc.png)
+
 ## Once Sprint Boot Application will be started successfully then we 
 can call following Endpoints by using POSTMAN
 
