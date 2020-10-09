@@ -5,5 +5,7 @@ import lombok.Data;
 @Data
 public class Clients {
 
-	private String clientName;
+	private String event;
+	private String symbol;
+	private Long interval;
 }

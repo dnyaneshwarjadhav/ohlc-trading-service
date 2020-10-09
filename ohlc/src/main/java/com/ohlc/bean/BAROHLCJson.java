@@ -1,5 +1,7 @@
 package com.ohlc.bean;
 
+import javax.persistence.Column;
+
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -31,5 +33,7 @@ public class BAROHLCJson {
 	
 	@JsonProperty("TS2")
 	public Long tS2;
+	
+	public Long tradeBarId;
 
 }

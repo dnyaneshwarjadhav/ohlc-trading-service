@@ -37,31 +37,8 @@ public class Worker3 implements Runnable {
 			        System.out.println("New client subscription requested : "+line);
 			    }
 			    
-			    publishBARChart();
+			    
 			}
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void publishBARChart() {
-		try{
-			synchronized(String.class) {
-				FiniteStateMachineService fsm = Singleton.getInstance(FiniteStateMachineService.class);
-				List<BAROHLCJson> list = fsm.getOHLCJsons();
-				if(list!=null && list.size()>0) {
-					System.out.println("Data published on----"+new Date());
-					
-					Iterator<BAROHLCJson> itr = list.iterator();
-					while(itr.hasNext()) {
-						BAROHLCJson json = new BAROHLCJson();
-						if(json!=null && (json.getSym()!=null && json.getP()!=null && json.getTS2()!=null)) {
-							System.out.println(json.getSym() + "      " + json.getP() + "     " + json.getTS2());
-						}
-					}
-				}
-			}
-			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

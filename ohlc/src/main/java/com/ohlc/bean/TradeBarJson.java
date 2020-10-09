@@ -1,6 +1,6 @@
 package com.ohlc.bean;
 
-import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,29 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class TradeBarJson {
-	private Integer id;
-	private List<BAROHLCJson> barRepresentation;
+	@JsonProperty("o")
+	public String o;
+	
+	@JsonProperty("h")
+	public String h;
+	
+	@JsonProperty("l")
+	public String l;
+	
+	@JsonProperty("c")
+	public String c;
+	
+	@JsonProperty("volume")
+	public String volume;
+	
+	@JsonProperty("event")
+	public String event;
+	
+	@JsonProperty("symbol")
+	public String symbol;
+	
+	@JsonProperty("bar_num")
+	public Long barNum;
 	
 	
 }
