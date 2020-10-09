@@ -24,8 +24,6 @@ import com.ohlc.utils.Singleton;
 @RunWith(SpringJUnit4ClassRunner.class)
 public class FiniteStateMachineServiceTest {
 
-	private static Integer tradeBarCounter = 1;
-	
 	@Mock
 	private OHLCRepo repo;
 	
