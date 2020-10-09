@@ -1,11 +1,8 @@
 package com.ohlc.workers;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.ohlc.bean.BAROHLCJson;
 import com.ohlc.service.FiniteStateMachineService;
 import com.ohlc.service.JsonParserHelper;
-import com.ohlc.utils.Singleton;
 
 /**
  * Reads the Trades data input (line by line from JSON),
@@ -31,7 +28,6 @@ public class Worker1 implements Runnable {
 	public void run() {
 		try {
 			while (true) {
-				//FiniteStateMachineService fsm = Singleton.getInstance(FiniteStateMachineService.class);
 				if(this.newData!=null && !this.newData.isEmpty()) {
 					this.fsmService.storeOHLCData(JsonParserHelper.convertJSONToObject(this.newData, BAROHLCJson.class));
 				}
