@@ -1,7 +1,6 @@
 package com.ohlc.controller;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -38,16 +37,6 @@ public class OHLCController {
 					list.forEach(barChrt -> {
 						tradeBars.add(populateDate(barChrt, list));
 					});
-					
-					System.out.println("Data published on----"+new Date());
-					
-					Iterator<BAROHLCJson> itr = list.iterator();
-					while(itr.hasNext()) {
-						BAROHLCJson json = new BAROHLCJson();
-						if(json!=null && (json.getSym()!=null && json.getP()!=null && json.getTS2()!=null)) {
-							System.out.println(json.getSym() + "      " + json.getP() + "     " + json.getTS2());
-						}
-					}
 					
 					return tradeBars;
 				}
